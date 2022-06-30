@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="714e12a3-7512-493e-b085-11d5941b343b" name="Default Changelist" comment="init2">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/assets/AppAsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/assets/AppAsset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/params.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/layouts/blank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/site/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/LoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" beforeDir="false" afterPath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/ContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/ResendVerificationEmailForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/SignupForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/SignupForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/VerifyEmailForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/config/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/nginx/app.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/nginx/log/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/provision/always-as-root.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/provision/common.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/provision/once-as-root.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/provision/once-as-vagrant.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrant/provision/provision.awk" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="28O8uoSYlvIFRp7Fl75cNSOFxKR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="714e12a3-7512-493e-b085-11d5941b343b" name="Default Changelist" comment="" />
+      <created>1651076496306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651076496306</updated>
+      <workItem from="1651076502946" duration="6003000" />
+      <workItem from="1651209858357" duration="597000" />
+      <workItem from="1651218790807" duration="1181000" />
+      <workItem from="1651738647983" duration="1196000" />
+      <workItem from="1656506902184" duration="13983000" />
+      <workItem from="1656558250304" duration="315000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1651111187007</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651111187008</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init2">
+      <created>1656554285874</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656554285898</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <MESSAGE value="init2" />
+    <option name="LAST_COMMIT_MESSAGE" value="init2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="337" y="170" key="RollbackChangesDialog" timestamp="1656507470363">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="337" y="170" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656507470362" />
+    <state x="0" y="0" width="1440" height="791" key="Vcs.Push.Dialog.v2" timestamp="1656554641113">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="0" y="0" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1656554641113" />
+    <state x="0" y="25" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.25.1440.786" timestamp="1651111236288" />
+    <state width="1440" height="786" key="Vcs.Push.Dialog.v2/0.25.1440.786@0.25.1440.786" timestamp="1651111236387" />
+    <state x="0" y="25" width="1440" height="791" key="Vcs.Push.Dialog.v2/0.25.1440.791/1440.25.1920.1055@0.25.1440.791" timestamp="1656554359740" />
+  </component>
+</project>

@@ -1,5 +1,4 @@
 <?php
-
 namespace common\models;
 
 use Yii;
@@ -12,55 +11,87 @@ use yii\web\IdentityInterface;
  * User model
  *
  * @property integer $id
+ * @property integer $gid
+ * @property integer $role
  * @property string $username
  * @property string $password_hash
  * @property string $password_reset_token
- * @property string $verification_token
  * @property string $email
  * @property string $auth_key
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
+ * @property string $phone
+ * @property string $wsaf_urid
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_INACTIVE = 9;
-    const STATUS_ACTIVE = 10;
+    const STATUS_DELETED = 2;
+    const STATUS_ACTIVE = 1;
 
-
+    public $password;
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%user}}';
+        return '{{%bk_user}}';
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::class,
-        ];
-    }
+
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
+            [['username','nickname','password'], 'required','on'=>'create'],
+            [['username','nickname'], 'required','on'=>'update'],
+            [['gid','status', 'create_time'], 'integer'],
+            [['update_time','wsaf_urid'], 'safe'],
+            ['username','unique'],
+            [['create_time'], 'default','value'=>time()],
+            [['username', 'auth_key','phone'], 'string', 'max' => 32],
+            [['password_hash', 'password_reset_token', 'nickname','role'], 'string', 'max' => 256],
+            ['status', 'default', 'value' => self::STATUS_ACTIVE],
+            ['create_time', 'default', 'value' => time()],
+            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            [['unionid'], 'string', 'max' => 100],
+            [['wsaf_urid'], 'string', 'max' => 64],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => '用户名',
+            'password'=>'密码',
+            'auth_key' => 'Auth Key',
+            'password_hash' => 'Password Hash',
+            'password_reset_token' => 'Password Reset Token',
+            'nickname' => '昵称',
+            'status' => 'Status',
+            'create_time' => '添加时间',
+            'update_time' => 'Update Time',
+            'gid'=>'所属企业',
+            'pid'=>'上级主管',
+            'role'=>'角色',
+            'phone'=>'联系电话',
+            'wsaf_urid'=>'wsaf_urid',
+        ];
+    }
+
+
+
+
+    /**
+     * @inheritdoc
      */
     public static function findIdentity($id)
     {
@@ -68,11 +99,12 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
+        $result =    self::find()->where(['auth_key'=>$token])->one();
+        return $result;
     }
 
     /**
@@ -83,6 +115,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
+//         return static::findOne(['user' => $username]);
         return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
     }
 
@@ -105,19 +138,6 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * Finds user by verification email token
-     *
-     * @param string $token verify email token
-     * @return static|null
-     */
-    public static function findByVerificationToken($token) {
-        return static::findOne([
-            'verification_token' => $token,
-            'status' => self::STATUS_INACTIVE
-        ]);
-    }
-
-    /**
      * Finds out if password reset token is valid
      *
      * @param string $token password reset token
@@ -135,7 +155,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getId()
     {
@@ -143,7 +163,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getAuthKey()
     {
@@ -151,7 +171,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function validateAuthKey($authKey)
     {
@@ -166,6 +186,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
+
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
@@ -196,18 +217,15 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * Generates new token for email verification
-     */
-    public function generateEmailVerificationToken()
-    {
-        $this->verification_token = Yii::$app->security->generateRandomString() . '_' . time();
-    }
-
-    /**
      * Removes password reset token
      */
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function generateAccessToken()
+    {
+        return Yii::$app->security->generateRandomString();
     }
 }

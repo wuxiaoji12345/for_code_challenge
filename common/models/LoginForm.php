@@ -1,5 +1,4 @@
 <?php
-
 namespace common\models;
 
 use Yii;
@@ -60,6 +59,14 @@ class LoginForm extends Model
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         }
         
+        return false;
+    }
+
+    public function getUserID()
+    {
+        if ($this->validate()) {
+            return $this->_user->id;
+        }
         return false;
     }
 
